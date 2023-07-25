@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: "Inter";
+    box-sizing: border-box;
 }
 
 a {
@@ -21,6 +22,7 @@ ul {
     max-width: 1200px;
 }
 
+/*------------------------header------------------------------*/
 .header {
     padding: 20px 0;
 }
@@ -51,6 +53,12 @@ ul {
     font-size: 14px;
     line-height: 285%;
     letter-spacing: 0.14px;
+    transition: all .3s;
+    border-bottom: 1px solid transparent;
+}
+
+.header__list-link:hover {
+    border-bottom: 1px solid #2c2c2c;
 }
 
 .header__interaction {
@@ -70,6 +78,9 @@ ul {
     letter-spacing: 0.14px;
 }
 
+/*------------------------header------------------------------*/
+
+/*------------------------button------------------------------*/
 .button {
     color: #fff;
     padding: 4px 24px;
@@ -81,6 +92,58 @@ ul {
     border-radius: 4px;
     transition: all .3s;
 }
-.button:hover{
+
+.button:hover {
     background: #ff493f;
 }
+
+/*------------------------button------------------------------*/
+
+/*------------------------House------------------------------*/
+
+.house {
+    padding: 64px 0;
+}
+.house__title {
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+    max-width: 60%;
+    margin-bottom: 64px;
+}
+
+.house__title>span {
+    color: #FD665E;
+}
+
+.house__content {
+    display: flex;
+    gap: 98px;
+
+}
+
+.house__content-left{
+    max-width: 305px;
+}
+.house__content-text {
+    line-height: 160%;
+    letter-spacing: 0.16px;
+    margin-bottom: 40px;
+}
+
+.house__content-button {
+    padding: 19px 32px;
+}
+
+.house__content-img {
+    max-width: 100%;
+    height: auto;
+   
+}
+
+/*------------------------House------------------------------*/
+/*------------------------Room------------------------------*/
+
+/*------------------------Room------------------------------*/
