@@ -104,6 +104,7 @@ ul {
 .house {
     padding: 64px 0;
 }
+
 .house__title {
     font-size: 96px;
     font-style: normal;
@@ -124,9 +125,10 @@ ul {
 
 }
 
-.house__content-left{
+.house__content-left {
     max-width: 305px;
 }
+
 .house__content-text {
     line-height: 160%;
     letter-spacing: 0.16px;
@@ -140,10 +142,68 @@ ul {
 .house__content-img {
     max-width: 100%;
     height: auto;
-   
+
 }
 
 /*------------------------House------------------------------*/
 /*------------------------Room------------------------------*/
+.room {
+    padding: 80px 0;
+}
 
+
+.room__top {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.room__title {
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+}
+
+.room__btns {
+    display: flex;
+    gap: 8px;
+    align-self: flex-end;
+}
+
+.room__btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.03);
+    background-image: url('../img/arrowBtn.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.room__btn:last-child {
+    transform: rotateY(180deg);
+}
+
+
+.slider {
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.slider__wrapper {
+    display: flex;
+     transition: all .3s;
+}
+.slider__item-img {
+    object-fit: cover;
+    max-width: 305px;
+    height: auto;
+}
+.slider__item-img:not(:last-child){
+    margin-right: 40px;
+}
 /*------------------------Room------------------------------*/
