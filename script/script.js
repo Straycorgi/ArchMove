@@ -1,5 +1,5 @@
 let btns = document.querySelectorAll('.room__btn');
-let imgs = document.querySelectorAll('.slider__item-img').length;
+let imgs = document.querySelectorAll('.slider__item-img').length-3;
 let currentImg = 0;
 btns.forEach(btn => btn.addEventListener("click", scrollSlider));
 function scrollSlider(e) {
