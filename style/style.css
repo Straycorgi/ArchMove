@@ -196,14 +196,79 @@ ul {
 
 .slider__wrapper {
     display: flex;
-     transition: all .3s;
+    transition: all .3s;
 }
+
 .slider__item-img {
     object-fit: cover;
     max-width: 305px;
     height: auto;
 }
-.slider__item-img:not(:last-child){
+
+.slider__item-img:not(:last-child) {
     margin-right: 40px;
 }
+
 /*------------------------Room------------------------------*/
+
+/*------------------------build------------------------------*/
+.build {
+    padding: 80px 0;
+}
+
+.build__wrapper {
+    display: flex;
+    margin-bottom: 64px;
+}
+
+.build__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.build__wrapper-content {
+    padding: 30px 114px;
+}
+
+.build__content-title {
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+    margin-bottom: 40px;
+}
+
+.build__content-box:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.build__content-box {
+    display: flex;
+}
+
+.build__box-img {
+    align-self: start;
+    margin-right: 38px;
+}
+
+.build__box-subtitle {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 160%;
+    letter-spacing: 0.16px;
+    margin-bottom: 8px;
+}
+
+.build__box-text {
+    line-height: 160%;
+    letter-spacing: 0.16px;
+}
+.build__button{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 187px;
+}
+/*------------------------build------------------------------*/
