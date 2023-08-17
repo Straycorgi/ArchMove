@@ -22,14 +22,14 @@ function scrollSlider(e) {
         else{
             currentImg--;
             document.querySelector('.slider__wrapper').style.marginLeft = -(345 * currentImg) + 'px';
-            console.log("xd")
+            
         }
     }
     else if (e.target.id == "right") {
         if (currentImg != imgs) {
             currentImg++;
             document.querySelector('.slider__wrapper').style.marginLeft = -(345 * currentImg) + 'px';
-            console.log("xd")
+            
         }
         else{
             currentImg=0;
@@ -52,14 +52,14 @@ function scrollSliderComms(e) {
         else{
             currentComm--;
             document.querySelector('.comments__slider').style.marginLeft = -(870 * currentComm) + 'px';
-            console.log("xd")
+            
         }
     }
     else if (e.target.id == "rightCom") {
         if (currentComm != comments) {
             currentComm++;
             document.querySelector('.comments__slider').style.marginLeft = -(870 * currentComm) + 'px';
-            console.log("xd")
+            
         }
         else{
             currentComm=0;
