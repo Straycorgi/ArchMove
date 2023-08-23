@@ -13,37 +13,52 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <nav class="header__nav">
-                    <a href="#" class="header__nav--link">
-                        <img src="img/logo.svg" alt="logo" class="header__nav--img">
-                    </a>
-                    <ul class="header__nav--list header__list">
-                        <li class="header__list-item">
-                            <a href="#" class="header__list-link">How it Works</a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#" class="header__list-link">Design Gallery</a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#" class="header__list-link">Architects</a>
-                        </li>
-                        <li class="header__list-item">
-                            <a href="#" class="header__list-link">Articles</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__interaction">
-                    <img src="img/search.svg" alt="search" class="header__interaction-seacrh">
-                    <a href="#" class="header__interacton-in">Sign In</a>
-                    <a href="#" class="header__interaction-up button">Sign Up</a>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <nav class="header__nav">
+                        <a href="#" class="header__nav--link">
+                            <img src="img/logo.svg" alt="logo" class="header__nav--img">
+                        </a>
+                        <ul class="header__nav--list header__list">
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-link">How it Works</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-link">Design Gallery</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-link">Architects</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#" class="header__list-link">Articles</a>
+                            </li>
+                            <li class="header__list-item mobile">
+                                <a href="#" class="header__list-link">Sign In</a>
+                            </li>
+                            <li class="header__list-item mobile">
+                                <a href="#" class="header__list-link">Sign Up</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__interaction-mobile">
+                        <img src="img/search.svg" alt="search" class="header__interaction-seacrh">
+                        <div class="burger">
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                            <div class="burger__line"></div>
+                        </div>
+                    </div>
+                    <div class="header__interaction">
+                        <img src="img/search.svg" alt="search" class="header__interaction-seacrh">
+                        <a href="#" class="header__interacton-in">Sign In</a>
+                        <a href="#" class="header__interaction-up button">Sign Up</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main class="main">
+        </header>
+        <!-- <main class="main">
         <section class="house">
             <div class="container">
                 <h1 class="house__title">Build Your
@@ -172,42 +187,71 @@
                 </div>
             </div>
         </section>
-        <section class="partners container">
-            <h2 class="partners__title">Our Partners</h2>
-            <ul class="partners__list">
-                <li class="partnes__list-item">
-                    <a href="#" class="partners__item-link">
-                        <img src="img/u.svg" alt="" class="partners__item-img">
-                    </a>
-                </li>
-                <li class="partnes__list-item">
-                    <a href="#" class="partners__item-link">
-                        <img src="img/next.svg" alt="" class="partners__item-img">
-                    </a>
-                </li>
-                <li class="partnes__list-item">
-                    <a href="#" class="partners__item-link">
-                        <img src="img/pin.svg" alt="" class="partners__item-img">
-                    </a>
-                </li>
-                <li class="partnes__list-item">
-                    <a href="#" class="partners__item-link">
-                        <img src="img/leafe.svg" alt="" class="partners__item-img">
-                    </a>
-                </li>
-                <li class="partnes__list-item">
-                    <a href="#" class="partners__item-link">
-                        <img src="img/Terra.svg" alt="" class="partners__item-img">
-                    </a>
-                </li>
-                <li class="partnes__list-item">
-                    <a href="#" class="partners__item-link">
-                        <img src="img/Dune.svg" alt="" class="partners__item-img">
-                    </a>
-                </li>
-            </ul>
+        <section class="partners">
+            <div class="container">
+                <h2 class="partners__title">Our Partners</h2>
+                <ul class="partners__list">
+                    <li class="partnes__list-item">
+                        <a href="#" class="partners__item-link">
+                            <img src="img/u.svg" alt="" class="partners__item-img">
+                        </a>
+                    </li>
+                    <li class="partnes__list-item">
+                        <a href="#" class="partners__item-link">
+                            <img src="img/next.svg" alt="" class="partners__item-img">
+                        </a>
+                    </li>
+                    <li class="partnes__list-item">
+                        <a href="#" class="partners__item-link">
+                            <img src="img/pin.svg" alt="" class="partners__item-img">
+                        </a>
+                    </li>
+                    <li class="partnes__list-item">
+                        <a href="#" class="partners__item-link">
+                            <img src="img/leafe.svg" alt="" class="partners__item-img">
+                        </a>
+                    </li>
+                    <li class="partnes__list-item">
+                        <a href="#" class="partners__item-link">
+                            <img src="img/Terra.svg" alt="" class="partners__item-img">
+                        </a>
+                    </li>
+                    <li class="partnes__list-item">
+                        <a href="#" class="partners__item-link">
+                            <img src="img/Dune.svg" alt="" class="partners__item-img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
-    </main>
+    </main> -->
+        <footer class="footer">
+            <div class="container">
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__item-link">About Us</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__item-link">How it Works</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__item-link">FAQ</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__item-link">Contact Us</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__item-link">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="footer__img-link">
+                        <img src="img/bigLogo.svg" alt="logo" class="footer__img-img">
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
 </body>
 <script src="script/script.js"></script>
 

@@ -21,7 +21,6 @@ ul {
     padding: 0 15px;
     max-width: 1200px;
 }
-
 /*------------------------header------------------------------*/
 .header {
     padding: 20px 0;
@@ -78,6 +77,44 @@ ul {
     letter-spacing: 0.14px;
 }
 
+.header__interaction-mobile {
+    display: none;
+    gap: 20px;
+    align-items: center;
+    z-index: 50;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.burger__line {
+    position: relative;
+    width: 20px;
+    height: 3px;
+    background-color: #2c2c2c;
+    transition: all .3s;
+
+}
+.burger:is(.open){
+    gap: 0px;
+}
+.burger:is(.open) .burger__line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 1.5px;
+}
+.burger:is(.open) .burger__line:nth-child(2) {
+    display: none;
+}
+.burger:is(.open) .burger__line:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 1.5px;
+}
+.mobile{
+    display: none;
+}
 /*------------------------header------------------------------*/
 
 /*------------------------button------------------------------*/
@@ -437,3 +474,148 @@ ul {
 }
 
 /*------------------------partners------------------------------*/
+
+
+/*------------------------footer------------------------------*/
+.footer {
+    padding: 80px 0;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__nav-list {
+    display: flex;
+}
+
+
+.nav__list-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.nav__item-link {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 286%;
+    color: inherit;
+    letter-spacing: 0.14px;
+    transition: all .3s;
+    padding-bottom: 2px;
+}
+
+.nav__item-link:hover {
+    border-bottom: 1px solid black;
+}
+
+.footer__img-link {}
+
+.footer__img-img {}
+
+
+/*------------------------footer------------------------------*/
+
+
+
+/*------------------------768px------------------------------*/
+@media (max-width:767.99px) {
+
+    /*------------------------header------------------------------*/
+    .header__interaction {
+        display: none;
+    }
+    .header__interaction-mobile {
+        display: flex;
+    }
+    .header__list{
+        position: absolute;
+        top: 0px;
+        left: 0;
+        height: 100vh;
+        width: 60vw;
+        z-index: 30;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-right: 1px solid #F9F9F9;
+        transition: all .3s;
+  
+        
+    }
+    .header__list-item:not(:last-child){
+        margin-right: 0;
+    }
+    .mobile{
+        display: flex;
+    }
+    /*------------------------header------------------------------*/
+    /*------------------------footer------------------------------*/
+    .nav__list-item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    /*------------------------footer------------------------------*/
+}
+
+
+
+
+
+
+
+
+/*------------------------768px------------------------------*/
+
+/*------------------------600px------------------------------*/
+@media (max-width:599.99px) {
+
+    /*------------------------footer------------------------------*/
+    .footer {
+        padding: 48px 0;
+        border-top: 1px solid rgba(224, 224, 224, 1);
+    }
+
+    .footer__nav {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__img-link {
+        margin-bottom: 40px;
+    }
+
+    .footer__nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__list-item:not(:last-child) {
+        margin-right: 0px;
+        margin-bottom: 16px;
+    }
+
+    .nav__item-link {
+        font-size: 16px;
+    }
+
+    /*------------------------footer------------------------------*/
+}
+
+
+/*------------------------600px------------------------------*/
+
+
+/*------------------------Animation------------------------------*/
+
+
+
+
+/*------------------------Animation------------------------------*/
