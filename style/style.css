@@ -21,6 +21,7 @@ ul {
     padding: 0 15px;
     max-width: 1200px;
 }
+
 /*------------------------header------------------------------*/
 .header {
     padding: 20px 0;
@@ -98,23 +99,29 @@ ul {
     transition: all .3s;
 
 }
-.burger:is(.open){
+
+.burger:is(.open) {
     gap: 0px;
 }
+
 .burger:is(.open) .burger__line:nth-child(1) {
     transform: rotate(45deg);
     top: 1.5px;
 }
+
 .burger:is(.open) .burger__line:nth-child(2) {
     display: none;
 }
+
 .burger:is(.open) .burger__line:nth-child(3) {
     transform: rotate(-45deg);
     bottom: 1.5px;
 }
-.mobile{
+
+.mobile {
     display: none;
 }
+
 /*------------------------header------------------------------*/
 
 /*------------------------button------------------------------*/
@@ -456,13 +463,9 @@ ul {
 
 .partners__list {
     display: flex;
-    justify-content: center;
-}
-
-.partnes__list-item {}
-
-.partnes__list-item:not(:last-child) {
-    margin-right: 69px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 55px;
 }
 
 .partners__item-link {
@@ -526,33 +529,64 @@ ul {
     .header__interaction {
         display: none;
     }
+
     .header__interaction-mobile {
         display: flex;
     }
-    .header__list{
+
+    .header__list {
         position: absolute;
         top: 0px;
         left: 0;
         height: 100vh;
         width: 60vw;
         z-index: 30;
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: white;
         border-right: 1px solid #F9F9F9;
         transition: all .3s;
-  
-        
+        transform: translateX(-500px);
     }
-    .header__list-item:not(:last-child){
+
+    .header__list--open {
+        transform: translate(0px);
+
+    }
+
+    .header__list-item:not(:last-child) {
         margin-right: 0;
     }
-    .mobile{
+
+    .mobile {
         display: flex;
     }
+
     /*------------------------header------------------------------*/
+    /*------------------------House------------------------------*/
+    .house__title {
+        font-size: 48px;
+        max-width: 55%;
+    }
+
+    .house__content {
+        flex-wrap: wrap;
+    }
+
+    .house__content-left {
+        max-width: 305px;
+    }
+
+    /*------------------------House------------------------------*/
+    /*------------------------partners------------------------------*/
+    .partners__title {
+       text-align: center;
+    }
+
+    /*------------------------partners------------------------------*/
+
     /*------------------------footer------------------------------*/
     .nav__list-item:not(:last-child) {
         margin-right: 20px;

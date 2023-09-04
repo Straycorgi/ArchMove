@@ -1,19 +1,22 @@
+/*------------------------header------------------------------*/
+const Burger = document.querySelector('.burger');
+const menu =document.querySelector('.header__list');
+/*------------------------header------------------------------*/
+
+
 /*------------------------Room slider------------------------------*/
-let btns = document.querySelectorAll('.room__btn');
-let imgs = document.querySelectorAll('.slider__item-img').length - 3;
-let currentImg = 0;
+const btns = document.querySelectorAll('.room__btn');
+const imgs = document.querySelectorAll('.slider__item-img').length - 3;
+const currentImg = 0;
 /*------------------------Room slider------------------------------*/
 
 /*------------------------Comments slider------------------------------*/
-let btnsComm = document.querySelectorAll('.comment__btn');
-let comments = document.querySelectorAll('.comments__slider-item').length - 1;
-let currentComm = 0;
+const btnsComm = document.querySelectorAll('.comment__btn');
+const comments = document.querySelectorAll('.comments__slider-item').length - 1;
+const currentComm = 0;
 /*------------------------Comment slider------------------------------*/
 
-/*------------------------Burger------------------------------*/
-let Burger = document.querySelector('.burger');
-let menu =document.querySelector('.header__list');
-/*------------------------Burger------------------------------*/
+
 
 /*------------------------Room slider------------------------------*/
 btns.forEach(btn => btn.addEventListener("click", scrollSlider));
@@ -80,15 +83,12 @@ Burger.addEventListener("click", openClose);
 
 function openClose() {
     if (Burger.classList.contains('open')) {
-        Burger.classList.remove('open');
-        menu.style.display="none";
-        
-
+        Burger.classList.remove('open');       
+        menu.classList.remove('header__list--open');
     }
     else {
-        Burger.classList.add('open');
-        menu.style.display="flex";
-        
+        Burger.classList.add('open'); 
+        menu.classList.add('header__list--open');
     }
 }
 
