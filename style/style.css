@@ -409,8 +409,10 @@ ul {
 
 .dream__wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 46px;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -535,6 +537,7 @@ ul {
     }
 
     .header__list {
+        
         position: absolute;
         top: 0px;
         left: 0;
@@ -553,6 +556,7 @@ ul {
 
     .header__list--open {
         transform: translate(0px);
+        
 
     }
 
@@ -580,6 +584,12 @@ ul {
     }
 
     /*------------------------House------------------------------*/
+    /*------------------------dream------------------------------*/
+    .dream__content-text{
+        font-size: 48px;
+    }
+ 
+     /*------------------------dream------------------------------*/
     /*------------------------partners------------------------------*/
     .partners__title {
        text-align: center;
@@ -594,8 +604,6 @@ ul {
 
     /*------------------------footer------------------------------*/
 }
-
-
 
 
 
