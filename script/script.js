@@ -1,19 +1,22 @@
 /*------------------------header------------------------------*/
 const Burger = document.querySelector('.burger');
-const menu =document.querySelector('.header__list');
+const menu = document.querySelector('.header__list');
+const signUp = document.querySelector('.header__interaction-up');
+const signUpMobile = document.querySelector('.list__interract');
+const signUpClose = document.querySelector('.signUp__btn');
 /*------------------------header------------------------------*/
 
 
 /*------------------------Room slider------------------------------*/
 const btns = document.querySelectorAll('.room__btn');
 const imgs = document.querySelectorAll('.slider__item-img').length - 3;
-const currentImg = 0;
+let currentImg = 0;
 /*------------------------Room slider------------------------------*/
 
 /*------------------------Comments slider------------------------------*/
 const btnsComm = document.querySelectorAll('.comment__btn');
 const comments = document.querySelectorAll('.comments__slider-item').length - 1;
-const currentComm = 0;
+let currentComm = 0;
 /*------------------------Comment slider------------------------------*/
 
 
@@ -21,27 +24,29 @@ const currentComm = 0;
 /*------------------------Room slider------------------------------*/
 btns.forEach(btn => btn.addEventListener("click", scrollSlider));
 function scrollSlider(e) {
+    let whiteSpace =  Number(window.getComputedStyle(document.querySelector('.slider__item-img')).marginRight.slice(0,2));
+    console.log(whiteSpace);
     if (e.target.id == "left") {
         if (currentImg == 0) {
             currentImg = imgs;
-            document.querySelector('.slider__wrapper').style.marginLeft = -(345 * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
 
         }
         else {
             currentImg--;
-            document.querySelector('.slider__wrapper').style.marginLeft = -(345 * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
 
         }
     }
     else if (e.target.id == "right") {
         if (currentImg != imgs) {
             currentImg++;
-            document.querySelector('.slider__wrapper').style.marginLeft = -(345 * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
 
         }
         else {
             currentImg = 0;
-            document.querySelector('.slider__wrapper').style.marginLeft = -(345 * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
         }
     }
 
@@ -83,15 +88,25 @@ Burger.addEventListener("click", openClose);
 
 function openClose() {
     if (Burger.classList.contains('open')) {
-        Burger.classList.remove('open');       
+        Burger.classList.remove('open');
         menu.classList.remove('header__list--open');
     }
     else {
-        Burger.classList.add('open'); 
+        Burger.classList.add('open');
         menu.classList.add('header__list--open');
     }
 }
-
-
-
 /*------------------------burger open/close------------------------------*/
+signUpMobile.addEventListener("click", signUpOpenClose);
+signUp.addEventListener("click", signUpOpenClose);
+function signUpOpenClose() {
+    if (!document.querySelector('.signUp').classList.contains('active')) {
+        document.querySelector('.signUp').classList.add('active');
+    }
+    else {
+        document.querySelector('.signUp').classList.remove('active');
+    }
+}
+signUpClose.addEventListener("click", () => {
+    document.querySelector('.signUp').classList.remove('active');
+})
