@@ -29,12 +29,12 @@ body {
 /*------------------------Sign Up------------------------------*/
 .signUp {
     position: fixed;
-
+    border-radius: 5px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto 15px;
+    margin: auto ;
     background-color: #fff;
     border: 1px solid black;
     max-width: 550px;
@@ -136,7 +136,7 @@ body {
 
 .signUp__input:focus+span {
     color: black;
-    top: -12px;
+    top: -18px;
 }
 
 .signUp__input:not(:focus)+span {
@@ -144,13 +144,15 @@ body {
 }
 
 .signUp__input:not(:placeholder-shown)+span {
-    top: -12px;
+    top: -18px;
 }
 
 
 .signUp__button {
-    display: inline-block;
-    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    
+    justify-content: center;
     border-color: transparent;
 }
 
@@ -165,6 +167,7 @@ body {
     width: 100%;
     background-color: #fff;
     z-index: 50;
+    animation: revealHeader .3s;
 }
 
 .header__wrapper {
@@ -280,6 +283,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: all .3s;
+    text-align: center;
 }
 
 .button:hover {
@@ -296,6 +300,7 @@ body {
 
 .house {
     padding: 64px 0;
+    animation: revealHouse 1s;
 }
 
 .house__title {
@@ -487,34 +492,34 @@ body {
 }
 
 .comments__wrapper {
+    display: flex;
     max-width: 870px;
-    padding-left: 105px;
     padding-bottom: 25px;
-    margin-left: 240px;
+    margin-left: auto;
     overflow: hidden;
+    position: relative;
 }
 
 .comments__slider {
-    z-index: 40;
-    position: relative;
+    z-index: 40;   
+    width: 100%;
     display: flex;
     transition: all .3s;
 }
 
 .comments__slider-item {
-
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*   max-width: 765px; */
     flex: 1 0 88%;
+    margin:0px 105px;
 
 }
 
-.comments__slider-item:not(:last-child) {
-    margin-right: 105px;
-}
+/* .comments__slider-item:not(:last-child) {
+    margin-right:0px 105px;
+} */
 
 .comments__slider-item::before {
     position: absolute;
@@ -547,7 +552,7 @@ body {
     z-index: 50;
     position: absolute;
     right: 0;
-    bottom: -12px;
+    bottom: 5px;
 }
 
 /*------------------------comments------------------------------*/
@@ -594,11 +599,6 @@ body {
 .dream__content-text>span {
     color: #FD665E;
 }
-
-.dream__content-button {}
-
-.button {}
-
 /*------------------------dream------------------------------*/
 
 /*------------------------partners------------------------------*/
@@ -666,11 +666,6 @@ body {
     border-bottom: 1px solid black;
 }
 
-.footer__img-link {}
-
-.footer__img-img {}
-
-
 /*------------------------footer------------------------------*/
 /*------------------------1200px------------------------------*/
 
@@ -710,7 +705,9 @@ body {
     .header__interaction-mobile {
         display: flex;
     }
-
+    .room__title{
+        font-size: 28px;
+    }
     .header__list {
 
         position: absolute;
@@ -842,6 +839,9 @@ body {
     .slider__item-img:not(:last-child) {
         margin-right: 24px;
     }
+    .signUp{
+        margin: auto 20px;
+    }
 }
 
 
@@ -849,8 +849,26 @@ body {
 
 
 /*------------------------Animation------------------------------*/
-
-
+@keyframes revealHouse {
+    from{
+        opacity: 0;
+        transform: translateX(-500px);       
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px); 
+    }
+}
+@keyframes revealHeader {
+    from{
+        opacity: 0;
+        transform: translateY(-500px);       
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px); 
+    }
+}
 
 
 /*------------------------Animation------------------------------*/

@@ -10,12 +10,14 @@ const signUpClose = document.querySelector('.signUp__btn');
 /*------------------------Room slider------------------------------*/
 const btns = document.querySelectorAll('.room__btn');
 const imgs = document.querySelectorAll('.slider__item-img').length - 3;
+const imgItem=  document.querySelector('.slider__item-img');
 let currentImg = 0;
 /*------------------------Room slider------------------------------*/
 
 /*------------------------Comments slider------------------------------*/
 const btnsComm = document.querySelectorAll('.comment__btn');
 const comments = document.querySelectorAll('.comments__slider-item').length - 1;
+const commentItem=document.querySelector('.comments__slider-item');
 let currentComm = 0;
 /*------------------------Comment slider------------------------------*/
 
@@ -24,29 +26,31 @@ let currentComm = 0;
 /*------------------------Room slider------------------------------*/
 btns.forEach(btn => btn.addEventListener("click", scrollSlider));
 function scrollSlider(e) {
-    let whiteSpace =  Number(window.getComputedStyle(document.querySelector('.slider__item-img')).marginRight.slice(0,2));
-    console.log(whiteSpace);
+    let whiteSpace =  parseInt(window.getComputedStyle(imgItem).marginRight);
+    let itemWidth=  imgItem.width;
+    
+
     if (e.target.id == "left") {
         if (currentImg == 0) {
             currentImg = imgs;
-            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((itemWidth+whiteSpace) * currentImg) + 'px';
 
         }
         else {
             currentImg--;
-            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((itemWidth+whiteSpace) * currentImg) + 'px';
 
         }
     }
     else if (e.target.id == "right") {
         if (currentImg != imgs) {
             currentImg++;
-            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((itemWidth+whiteSpace) * currentImg) + 'px';
 
         }
         else {
             currentImg = 0;
-            document.querySelector('.slider__wrapper').style.marginLeft = -((305+whiteSpace) * currentImg) + 'px';
+            document.querySelector('.slider__wrapper').style.marginLeft = -((itemWidth+whiteSpace) * currentImg) + 'px';
         }
     }
 
@@ -56,27 +60,30 @@ function scrollSlider(e) {
 /*------------------------Comments slider------------------------------*/
 btnsComm.forEach(btn => btn.addEventListener("click", scrollSliderComms));
 function scrollSliderComms(e) {
+    let itemWidth = parseInt(window.getComputedStyle(commentItem).width);
+    let itemSpace = itemWidth + (2*parseInt(getComputedStyle(commentItem).marginRight));
+    
     if (e.target.id == "leftCom") {
         if (currentComm == 0) {
             currentComm = comments;
-            document.querySelector('.comments__slider').style.marginLeft = -(870 * currentComm) + 'px';
+            document.querySelector('.comments__slider').style.marginLeft = -(itemSpace * currentComm) + 'px';
 
         }
         else {
             currentComm--;
-            document.querySelector('.comments__slider').style.marginLeft = -(870 * currentComm) + 'px';
+            document.querySelector('.comments__slider').style.marginLeft = -(itemSpace * currentComm) + 'px';
 
         }
     }
     else if (e.target.id == "rightCom") {
         if (currentComm != comments) {
             currentComm++;
-            document.querySelector('.comments__slider').style.marginLeft = -(870 * currentComm) + 'px';
+            document.querySelector('.comments__slider').style.marginLeft = -(itemSpace * currentComm) + 'px';
 
         }
         else {
             currentComm = 0;
-            document.querySelector('.comments__slider').style.marginLeft = -(870 * currentComm) + 'px';
+            document.querySelector('.comments__slider').style.marginLeft = -(itemSpace * currentComm) + 'px';
         }
     }
 
