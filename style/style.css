@@ -5,8 +5,11 @@
     margin: 0;
     font-family: "Inter";
     box-sizing: border-box;
+    
 }
-
+html{
+    scroll-behavior: smooth;
+}
 a {
     text-decoration: none;
 
@@ -34,7 +37,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto ;
+    margin: auto;
     background-color: #fff;
     border: 1px solid black;
     max-width: 550px;
@@ -151,7 +154,7 @@ body {
 .signUp__button {
     display: flex;
     width: 100%;
-    
+
     justify-content: center;
     border-color: transparent;
 }
@@ -292,6 +295,7 @@ body {
 
 .main {
     margin-top: 64px;
+    
 }
 
 /*------------------------button------------------------------*/
@@ -347,14 +351,26 @@ body {
 /*------------------------Room------------------------------*/
 .room {
     padding: 80px 0;
-}
 
+}
 
 .room__top {
     margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.room__bottom {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.room__bottom:is(.active),
+.room__top:is(.active) {
+    opacity: 1;
 }
 
 .room__title {
@@ -445,6 +461,15 @@ body {
 
 .build__content-box {
     display: flex;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 1s;
+    
+}
+
+.build__content-box:is(.active) {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .build__box-img {
@@ -501,7 +526,7 @@ body {
 }
 
 .comments__slider {
-    z-index: 40;   
+    z-index: 40;
     width: 100%;
     display: flex;
     transition: all .3s;
@@ -513,7 +538,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     flex: 1 0 88%;
-    margin:0px 105px;
+    margin: 0px 105px;
 
 }
 
@@ -599,6 +624,7 @@ body {
 .dream__content-text>span {
     color: #FD665E;
 }
+
 /*------------------------dream------------------------------*/
 
 /*------------------------partners------------------------------*/
@@ -705,9 +731,11 @@ body {
     .header__interaction-mobile {
         display: flex;
     }
-    .room__title{
+
+    .room__title {
         font-size: 28px;
     }
+
     .header__list {
 
         position: absolute;
@@ -839,7 +867,8 @@ body {
     .slider__item-img:not(:last-child) {
         margin-right: 24px;
     }
-    .signUp{
+
+    .signUp {
         margin: auto 20px;
     }
 }
@@ -850,23 +879,26 @@ body {
 
 /*------------------------Animation------------------------------*/
 @keyframes revealHouse {
-    from{
+    from {
         opacity: 0;
-        transform: translateX(-500px);       
+        transform: translateX(-500px);
     }
-    to{
+
+    to {
         opacity: 1;
-        transform: translateX(0px); 
+        transform: translateX(0px);
     }
 }
+
 @keyframes revealHeader {
-    from{
+    from {
         opacity: 0;
-        transform: translateY(-500px);       
+        transform: translateY(-500px);
     }
-    to{
+
+    to {
         opacity: 1;
-        transform: translateY(0px); 
+        transform: translateY(0px);
     }
 }
 
