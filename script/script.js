@@ -20,9 +20,26 @@ const comments = document.querySelectorAll('.comments__slider-item').length - 1;
 const commentItem=document.querySelector('.comments__slider-item');
 let currentComm = 0;
 /*------------------------Comment slider------------------------------*/
-
-
-
+let options = {
+    root: null,
+    rootMargion: '0px',
+    theresold: 0.5
+}
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(item =>{
+        if(item.isIntersecting){
+            item.target.classList.add('active');
+            
+        }
+        else{
+            item.target.classList.remove('active');
+        }
+    })
+},options)
+const targets = document.querySelectorAll('.observerTarget');
+targets.forEach(item=>{
+    observer.observe(item);
+})
 /*------------------------Room slider------------------------------*/
 btns.forEach(btn => btn.addEventListener("click", scrollSlider));
 function scrollSlider(e) {
